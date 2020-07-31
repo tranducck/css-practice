@@ -332,8 +332,7 @@ header .header__content-box p {
 
 .section-stories {
   padding: 15rem 0;
-  min-height: 100rem;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.85);
   position: relative;
 }
 
@@ -366,12 +365,12 @@ header .header__content-box p {
 }
 
 .story-box .story__content .story__content__img {
-  width: 16rem;
-  height: 16rem;
+  width: 15rem;
+  height: 15rem;
   overflow: hidden;
   border-radius: 50%;
   float: left;
-  margin-right: 2rem;
+  margin-right: 2.5rem;
   shape-outside: circle(50%);
   position: relative;
 }
@@ -385,10 +384,56 @@ header .header__content-box p {
   transform: scale(1.4);
 }
 
+.story-box .story__content .story__content__img figcaption {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate(-50%, 100%);
+}
+
 .story-box:hover .story__content .story__content__img img {
   transform: scale(1);
   filter: blur(2px) brightness(80%);
 }
+
+.story-box:hover .story__content .story__content__img figcaption {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.story-box .story__content .story__content__text p {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+section.section-form {
+  padding: 15rem 0;
+  background: linear-gradient(to bottom right, #7ed56f, #24b485);
+}
+
+.section-form .book {
+  min-height: 40rem;
+  width: 100%;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%,
+                                      rgba(255, 255, 255, 0.8) 50%,
+                                      transparent 50%),
+              url('../img/nat-10.jpg');
+}
+
+.section-form .book .book__form {
+  width: 50%;
+  padding: 5rem;
+}
+
 
 
 /* Button CSS */
@@ -513,6 +558,61 @@ a.link:hover {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Form CSS */
+.field {
+  margin-bottom: 2rem;
+}
+
+.input {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  color: #333;
+  border-radius: 3px;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s;
+  display: block;
+  width: 90%;
+}
+
+.input::placeholder {
+  color: #ccc;
+}
+
+.input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.input::-ms-input-placeholder {
+  color: #ccc;
+}
+
+.input:focus {
+  border-bottom: 3px solid #55c57a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+
+.input__label {
+  display: block;
+  margin: 0.8rem 2rem;
+  font-weight: 700;
+  visibility: visible;
+  font-size: 1.3rem;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.input:placeholder-shown + .input__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
 
 /* utilities CSS */
 .u-text-center {
