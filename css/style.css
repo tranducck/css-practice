@@ -434,16 +434,78 @@ section.section-form {
   padding: 5rem;
 }
 
+footer {
+  padding: 10rem 0;
+  background-color: #333;
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer__logo {
+  position: relative;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+footer .footer__logo img {
+  width: 15rem;
+}
+
+footer .footer__content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+.footer__content .footer__navigation,
+.footer__content .footer__copyright {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 2rem;
+  max-width: 40%;
+}
+
+.footer__content .footer__navigation {
+  display: flex;
+}
+
+.footer__content .footer__navigation li {
+  list-style: none;
+  margin-right: 1.5rem;
+}
+
+.footer__content .footer__navigation li:last-child {
+  margin-right: 0;
+}
+
+footer .footer--link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f7f7f7;
+  background-color: #333;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .footer--link:hover {
+  transform: rotate(5deg) scale(1.2);
+  color: #55c57a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
 
 
 /* Button CSS */
 .button {
   cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: inherit;
   display: inline-block;
   min-width: 10rem;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
   border-radius: 7.5rem;
   font-size: 1.6rem;
   transition: 0.3s;
@@ -563,6 +625,10 @@ a.link:hover {
   margin-bottom: 2rem;
 }
 
+.field:last-child {
+  margin-bottom: 0;
+}
+
 .input {
   background-color: #fff;
   border: none;
@@ -612,6 +678,49 @@ a.link:hover {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+
+.radio__group {
+  display: inline-block;
+  width: calc(50% - 0.5rem);
+}
+
+.radio__group input[type="radio"] {
+  display: none;
+}
+
+.radio__group .radio__label {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.radio__group .radio__label .radio__input{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  border: 0.5rem solid #55c57a;
+  position: relative;
+  transition: 0.3s;
+}
+
+.radio__group .radio__label .radio__input:before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 50%;
+  left: 50%;
+  background-color: #55c57a;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.radio__group input[type="radio"]:checked + .radio__label .radio__input:before {
+  opacity: 1;
 }
 
 /* utilities CSS */
