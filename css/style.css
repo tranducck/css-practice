@@ -181,6 +181,19 @@ header .header__content-box p {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 6rem;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  header .header__content-box h3 {
+    letter-spacing: 1rem;
+  }
+  header .header__content-box p {
+    letter-spacing: 0.5rem;
+  }
+  header {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    min-height: 95vh;
+  }
 }
 
 .section-about {
@@ -191,7 +204,6 @@ header .header__content-box p {
 
 .section-about .about__content-box {
   margin-bottom: 3rem;
-  padding-right: 5rem;
 }
 
 .section-about .about__content-box p {
@@ -208,7 +220,7 @@ header .header__content-box p {
 
 .section-about .about__img {
   position: absolute;
-  width: 50%;
+  width: 55%;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   outline-offset: 2rem;
   transition: 0.25s;
@@ -222,20 +234,44 @@ header .header__content-box p {
 
 .section-about .about__img.img--1 {
   top: 2rem;
-  left: 5%;
+  left: 0;
   z-index: 1;
 }
 
 .section-about .about__img.img--2 {
   top: 6rem;
-  right: 5%;
+  right: 0;
   z-index: 2;
 }
 
 .section-about .about__img.img--3 {
-  top: 10rem;
+  top: 15rem;
   left: 25%;
   z-index: 3;
+}
+
+@media only screen and (max-width: 600px) {
+  .section-about .about__img {
+    position: relative;
+    width: 33.3333%;
+    float: left;
+    transform: scale(1.2);
+  }
+
+  .section-about .about__img.img--1 {
+    top: 0;
+  }
+
+  .section-about .about__img.img--2 {
+    top: -1rem;
+    z-index: 3;
+  }
+
+  .section-about .about__img.img--3 {
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
 }
 
 .section-features {
@@ -446,6 +482,41 @@ header .header__content-box p {
   margin-bottom: 8rem;
 }
 
+@media only screen and (max-width: 600px),
+only screen and (hover: none) {
+  .section-tours .tour__card {
+    height: auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 3px;
+  }
+
+  .tour__card .tour__card__front,
+  .tour__card .tour__card__back {
+    position: relative;
+    box-shadow: none;
+    height: auto;
+  }
+
+  .tour__card:hover .tour__card__front {
+    transform: rotateY(0deg);
+  }
+
+  .tour__card .tour__card__back {
+    transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%,0 100%);
+    padding: 5rem 0;
+  }
+
+  .tour__card .tour__card__back h3 {
+    margin-bottom: 0;
+  }
+
+  .tour__card .tour__card__back p {
+    margin-bottom: 3rem;
+  }
+}
+
 .section-stories {
   padding: 15rem 0;
   background-color: rgba(255, 255, 255, 0.85);
@@ -489,6 +560,17 @@ header .header__content-box p {
   margin-right: 2.5rem;
   shape-outside: circle(50%);
   position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .section-stories .story-box {
+    width: 100%;
+    transform: skewX(0deg);
+  }
+
+  .story-box .story__content {
+    transform: skewX(0deg);
+  }
 }
 
 .story-box .story__content .story__content__img img {
@@ -550,6 +632,17 @@ section.section-form {
   padding: 5rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .section-form .book .book__form {
+    width: 100%;
+  }
+
+  .section-form .book {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                url('../img/nat-10.jpg');
+  }
+}
+
 footer {
   padding: 10rem 0;
   background-color: #333;
@@ -593,6 +686,28 @@ footer .footer__content {
 
 .footer__content .footer__navigation li:last-child {
   margin-right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__content .footer__navigation,
+  .footer__content .footer__copyright {
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+  
+  .footer__content .footer__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer .footer__content {
+    flex-wrap: wrap;
+  }
+
+  footer .footer__logo {
+    margin-bottom: 5rem;
+  }
 }
 
 footer .footer--link {
@@ -704,11 +819,21 @@ footer .footer--link:hover {
   min-height: 1px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 901px) {
   .col {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .row .col:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+
+  .col {
+    max-width: 100% !important;
   }
 }
 
