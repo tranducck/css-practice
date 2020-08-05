@@ -250,7 +250,7 @@ header .header__content-box p {
   z-index: 3;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .section-about .about__img {
     position: relative;
     width: 33.3333%;
@@ -562,7 +562,7 @@ only screen and (hover: none) {
   position: relative;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .section-stories .story-box {
     width: 100%;
     transform: skewX(0deg);
@@ -632,7 +632,7 @@ section.section-form {
   padding: 5rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .section-form .book .book__form {
     width: 100%;
   }
@@ -670,7 +670,7 @@ footer .footer__content {
 
 .footer__content .footer__navigation,
 .footer__content .footer__copyright {
-  border-top: 1px solid #f7f7f7;
+  border-top: 1px solid #777;
   padding-top: 2rem;
   max-width: 40%;
 }
@@ -688,7 +688,7 @@ footer .footer__content {
   margin-right: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .footer__content .footer__navigation,
   .footer__content .footer__copyright {
     max-width: 100%;
@@ -699,6 +699,8 @@ footer .footer__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
   }
 
   footer .footer__content {
@@ -827,7 +829,7 @@ footer .footer--link:hover {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .row .col:not(:last-child) {
     margin-bottom: 6rem;
   }
