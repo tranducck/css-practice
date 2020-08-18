@@ -56,9 +56,9 @@
     </header>
     <main>
       <section class="section-about">
-        <h2 class="heading--primary u-text-center u-mb-8">
-          EXCITING TOURS FOR ADVENTUROUS PEOPLE
-        </h2>
+        <div class="u-text-center u-mb-8">
+          <h2 class="heading--primary">EXCITING TOURS FOR ADVENTUROUS PEOPLE</h2>
+        </div>
         <div class="container u-pt-8">
           <div class="row">
             <div class="col">
@@ -86,8 +86,7 @@
       <section class="section-features">
         <div class="container">
           <div class="row justify-content-between">
-            <div class="col">
-              <div class="feature-box">
+              <div class="feature-box col">
                 <div class="feature__logo">
                   <i class="lnr lnr-earth"></i>
                 </div>
@@ -96,9 +95,7 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="feature-box">
+              <div class="feature-box col">
                 <div class="feature__logo">
                   <i class="lnr lnr-history"></i>
                 </div>
@@ -107,9 +104,7 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="feature-box">
+              <div class="feature-box col">
                 <div class="feature__logo">
                   <i class="lnr lnr-map"></i>
                 </div>
@@ -118,9 +113,7 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.</p>
                 </div>
               </div>
-            </div>
-            <div class="col">
-              <div class="feature-box">
+              <div class="feature-box col">
                 <div class="feature__logo">
                   <i class="lnr lnr-heart"></i>
                 </div>
@@ -130,12 +123,13 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       <section class="section-tours">
-        <h2 class="heading--primary">Most Popular tours</h2>
+        <div class="u-text-center">
+          <h2 class="heading--primary">Most Popular tours</h2>
+        </div>
         <div class="container u-pb-8">
           <div class="row justify-content-between">
             <div class="col">
@@ -219,7 +213,9 @@
             Your browser not support video
           </video>
         </div>
-        <h3 class="heading--primary u-text-center u-mb-6">We make people genuinely happy</h3>
+        <div class="u-text-center u-mb-6">
+          <h3 class="heading--primary">We make people genuinely happy</h3>
+        </div>
         <div class="container u-pt-8">
           <div class="story-box">
             <div class="story__content clearfix">
@@ -330,18 +326,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('sw.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-    </script>
   </body>
 </html>

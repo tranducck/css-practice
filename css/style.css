@@ -782,6 +782,7 @@ footer .footer--link:hover {
 
 /* Common Typograpy CSS */
 .heading--primary {
+  display: inline-block;
   font-size: 3.5rem;
   text-transform: uppercase;
   color: transparent;
