@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
@@ -74,16 +76,20 @@
             </div>
             <div class="col">
               <div class="about__image-box">
-                <img src="img/nat-1.jpg" class="about__img img--1">
-                <img src="img/nat-2.jpg" class="about__img img--2">
-                <img src="img/nat-3.jpg" class="about__img img--3">
+                <img data-src="img/nat-1.jpg" src="" class="lazy about__img img--1">
+                <img data-src="img/nat-2.jpg" src="" class="lazy about__img img--2">
+                <img data-src="img/nat-3.jpg" src="" class="lazy about__img img--3">
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-features">
+      <section
+        class="section-features lazy"
+        data-bg-multi="linear-gradient(to bottom right, rgba(126, 213, 111, 0.8),
+                  rgba(36, 180, 132, 0.8)),
+                  url('img/nat-4.jpg')">
         <div class="container">
           <div class="row justify-content-between">
               <div class="feature-box col">
@@ -135,7 +141,10 @@
             <div class="col">
               <div class="tour__card tour--1">
                 <div class="tour__card__front">
-                  <div class="tour__card__bg">&nbsp;</div>
+                  <div
+                    class="tour__card__bg lazy"
+                    data-bg-multi="linear-gradient(to right bottom, #ffb900, #ff7730), url(img/nat-5.jpg)"
+                    >&nbsp;</div>
                   <div class="tour__card__head">
                     <h4>The Sea Explorer</h4>
                   </div>
@@ -157,7 +166,10 @@
             <div class="col">
               <div class="tour__card tour--2">
                 <div class="tour__card__front">
-                  <div class="tour__card__bg">&nbsp;</div>
+                  <div
+                    class="tour__card__bg lazy"
+                    data-bg-multi="linear-gradient(to right bottom, #7ed56f, #55c57a), url(img/nat-6.jpg)"
+                    >&nbsp;</div>
                   <div class="tour__card__head">
                     <h4>The Forest Hiker</h4>
                   </div>
@@ -179,7 +191,10 @@
             <div class="col">
               <div class="tour__card tour--3">
                 <div class="tour__card__front">
-                  <div class="tour__card__bg">&nbsp;</div>
+                  <div
+                    class="tour__card__bg lazy"
+                    data-bg-multi="linear-gradient(to right bottom, #2998ff, #5643fa), url(img/nat-7.jpg)"
+                    >&nbsp;</div>
                   <div class="tour__card__head">
                     <h4>The Snow Adventurer</h4>
                   </div>
@@ -207,9 +222,9 @@
 
       <section class="section-stories">
         <div class="video__bg">
-          <video loop muted autoplay>
-            <source src="img/video.mp4" type="video/mp4">
-            <source src="img/video.webm" type="video/webm">
+          <video loop muted autoplay class="lazy">
+            <source data-src="img/video.mp4" type="video/mp4">
+            <source data-src="img/video.webm" type="video/webm">
             Your browser not support video
           </video>
         </div>
@@ -220,7 +235,7 @@
           <div class="story-box">
             <div class="story__content clearfix">
               <figure class="story__content__img">
-                <img src="img/nat-8.jpg" alt="Mary Smith">
+                <img class="lazy" data-src="img/nat-8.jpg" alt="Mary Smith">
                 <figcaption>Mary Smith</figcaption>
               </figure>
               <div class="story__content__text">
@@ -236,7 +251,7 @@
           <div class="story-box">
             <div class="story__content clearfix">
               <figure class="story__content__img">
-                <img src="img/nat-9.jpg" alt="John Doe">
+                <img class="lazy" data-src="img/nat-9.jpg" alt="John Doe">
                 <figcaption>John Doe</figcaption>
               </figure>
               <div class="story__content__text">
@@ -294,7 +309,7 @@
     </main>
     <footer>
       <div class="footer__logo">
-        <img src="img/logo-green-2x.png">
+        <img class="lazy" data-src="img/logo-green-2x.png">
       </div>
       <div class="container footer__content">
         <ul class="footer__navigation">
@@ -326,5 +341,17 @@
         </div>
       </div>
     </footer>
+        <script>
+      (function () {
+
+        var ll = new LazyLoad({
+          class_applied: "lz-applied",
+          class_loading: "lz-loading",
+          class_loaded: "lz-loaded",
+          class_error: "lz-error",
+          // Assign the callbacks defined above
+        });
+      })();
+    </script>
   </body>
 </html>

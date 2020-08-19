@@ -277,8 +277,6 @@ header .header__content-box p {
 .section-features {
   padding: 20rem 0;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(36, 180, 132, 0.8)),
-                    url('../img/nat-4.jpg');
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem;
@@ -389,21 +387,19 @@ header .header__content-box p {
   clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+  background-size: cover;
 }
 
 .tour__card.tour--1 .tour__card__bg {
-  background: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
-  background-size: cover;
+  /*background: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);*/
 }
 
 .tour__card.tour--2 .tour__card__bg {
-  background: linear-gradient(to right bottom, #7ed56f, #55c57a), url(../img/nat-6.jpg);
-  background-size: cover;
+  /*background: linear-gradient(to right bottom, #7ed56f, #55c57a), url(../img/nat-6.jpg);*/
 }
 
 .tour__card.tour--3 .tour__card__bg {
-  background: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
-  background-size: cover;
+  /*background: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);*/
 }
 
 .tour__card .tour__card__head {
